@@ -1,873 +1,672 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Archana Tharammal | AI Solutions Engineer</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<style>
-:root{
-  --bg:#FAFAF8;
-  --surface:#FFFFFF;
-  --surface2:#F4F2EE;
-  --accent:#1B4332;
-  --accent2:#40916C;
-  --accent-light:#D8F3DC;
-  --text:#1C1C1C;
-  --muted:#6A6A6A;
-  --border:#E4E0D8;
-  --nav-h:64px;
-  --radius:14px;
-  --shadow:0 2px 16px rgba(0,0,0,0.06);
-  --shadow-md:0 8px 32px rgba(27,67,50,0.13);
-  --max-w:960px;
-}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 20px)}
-body{font-family:'Lato',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;font-size:15px;line-height:1.65}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- Security -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
 
-/* ══ TOP NAVBAR ══ */
-.topnav{
-  position:fixed;top:0;left:0;right:0;
-  height:var(--nav-h);background:var(--accent);
-  display:flex;align-items:center;
-  padding:0 2rem;z-index:400;
-  box-shadow:0 2px 20px rgba(0,0,0,0.2);
-}
-.nav-brand{
-  display:flex;align-items:center;gap:0.65rem;
-  flex-shrink:0;margin-right:2rem;text-decoration:none;
-}
-.nav-brand-photo{
-  width:36px;height:36px;border-radius:50%;
-  object-fit:cover;object-position:top center;
-  border:2px solid rgba(255,255,255,0.3);
-  display:block;
-}
-.nav-brand-name{
-  font-family:'Playfair Display',serif;
-  font-size:0.95rem;color:#fff;white-space:nowrap;
-}
-.nav-links{
-  display:flex;align-items:center;gap:0.05rem;flex:1;
-  overflow-x:auto;scrollbar-width:none;
-}
-.nav-links::-webkit-scrollbar{display:none}
-.nav-links a{
-  text-decoration:none;color:rgba(255,255,255,0.62);
-  font-size:0.74rem;font-weight:700;letter-spacing:0.03em;
-  padding:0.36rem 0.6rem;border-radius:7px;
-  white-space:nowrap;transition:all 0.2s;
-}
-.nav-links a:hover,.nav-links a.active{color:#fff;background:rgba(255,255,255,0.12)}
-.nav-social{
-  display:flex;align-items:center;gap:0.35rem;
-  margin-left:1rem;flex-shrink:0;
-}
-.nav-social a{
-  width:30px;height:30px;border-radius:7px;
-  background:rgba(255,255,255,0.1);
-  display:flex;align-items:center;justify-content:center;
-  color:rgba(255,255,255,0.7);font-size:0.74rem;
-  text-decoration:none;transition:all 0.2s;
-}
-.nav-social a:hover{background:var(--accent2);color:#fff}
-.hamburger{
-  display:none;background:transparent;border:none;
-  color:#fff;font-size:1.25rem;cursor:pointer;
-  padding:0.2rem 0.4rem;margin-left:0.75rem;
-  line-height:1;
-}
-.mobile-menu{
-  display:none;flex-direction:column;
-  position:fixed;top:var(--nav-h);left:0;right:0;
-  background:var(--accent);z-index:390;
-  padding:0.6rem 1.5rem 1rem;
-  box-shadow:0 8px 24px rgba(0,0,0,0.2);
-}
-.mobile-menu.open{display:flex}
-.mobile-menu a{
-  text-decoration:none;color:rgba(255,255,255,0.75);
-  font-size:0.88rem;font-weight:700;
-  padding:0.55rem 0.5rem;border-radius:8px;
-  border-bottom:1px solid rgba(255,255,255,0.07);
-  transition:all 0.15s;
-}
-.mobile-menu a:last-child{border-bottom:none}
-.mobile-menu a:hover{color:#fff;background:rgba(255,255,255,0.1)}
+  <!-- SEO -->
+  <meta name="description" content="Archana Tharammal - AI Solutions Engineer and Data Scientist Portfolio">
+  <meta name="keywords" content="AI Engineer, Machine Learning, Data Science, NLP, RAG, Generative AI">
+  <meta name="author" content="Archana Tharammal">
 
-/* ══ PAGE WRAPPER ══ */
-.page{
-  max-width:var(--max-w);
-  margin:0 auto;
-  padding:calc(var(--nav-h) + 2.5rem) 2rem 5rem;
-}
+  <!-- Open Graph -->
+  <meta property="og:title" content="Archana Tharammal Portfolio">
+  <meta property="og:description" content="AI Solutions Engineer and Data Scientist Portfolio">
+  <meta property="og:image" content="photo.jpeg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourdomain.netlify.app">
 
-/* ══ SECTIONS ══ */
-section{
-  margin-bottom:4.5rem;
-  opacity:0;transform:translateY(18px);
-  animation:fadeUp 0.5s ease forwards;
-}
-section:nth-child(1){animation-delay:0.05s}
-section:nth-child(2){animation-delay:0.1s}
-section:nth-child(3){animation-delay:0.15s}
-section:nth-child(4){animation-delay:0.2s}
-section:nth-child(5){animation-delay:0.25s}
-section:nth-child(6){animation-delay:0.3s}
-section:nth-child(7){animation-delay:0.35s}
-section:nth-child(8){animation-delay:0.4s}
-@keyframes fadeUp{to{opacity:1;transform:translateY(0)}}
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="photo.jpeg">
+  
+  <title>Archana Tharammal | AI/ML Engineer</title>
 
-.sec-label{
-  font-size:0.68rem;text-transform:uppercase;
-  letter-spacing:0.13em;color:var(--accent2);
-  font-weight:700;margin-bottom:0.35rem;
-}
-.sec-title{
-  font-family:'Playfair Display',serif;
-  font-size:1.8rem;color:var(--text);
-  margin-bottom:1.5rem;line-height:1.2;
-}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-/* ══ HERO / ABOUT ══ */
-.hero{
-  background:var(--surface);
-  border:1px solid var(--border);
-  border-radius:var(--radius);
-  box-shadow:var(--shadow);
-  display:grid;
-  grid-template-columns:1fr auto;
-  gap:2rem;
-  align-items:center;
-  padding:2.25rem 2.5rem;
-  width:100%;
-}
-.hero-photo{
-  width:160px;
-  height:185px;
-  object-fit:cover;
-  object-position:top center;
-  border-radius:var(--radius);
-  border:3px solid var(--accent-light);
-  box-shadow:var(--shadow-md);
-  display:block;
-  flex-shrink:0;
-}
-.hero-tag{
-  font-size:0.72rem;text-transform:uppercase;
-  letter-spacing:0.12em;color:var(--accent2);font-weight:700;
-  display:flex;align-items:center;gap:0.5rem;margin-bottom:0.6rem;
-}
-.hero-tag::before{content:'';width:18px;height:2px;background:var(--accent2);border-radius:2px}
-.hero h1{
-  font-family:'Playfair Display',serif;
-  font-size:2.5rem;line-height:1.15;margin-bottom:0.85rem;
-}
-.hero h1 em{font-style:italic;color:var(--accent)}
-.hero-bio{
-  font-size:0.92rem;color:var(--muted);
-  line-height:1.75;margin-bottom:1.4rem;
-}
-.chips{display:flex;flex-wrap:wrap;gap:0.4rem}
-.chip{
-  background:var(--surface2);border:1px solid var(--border);
-  border-radius:100px;padding:0.28rem 0.75rem;
-  font-size:0.75rem;font-weight:700;color:var(--text);
-  transition:all 0.2s;cursor:default;
-}
-.chip:hover{background:var(--accent-light);border-color:var(--accent2);color:var(--accent)}
-.chip.dark{background:var(--accent);color:#fff;border-color:var(--accent)}
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-/* ══ TIMELINE ══ */
-.timeline{position:relative;padding-left:1.5rem}
-.timeline::before{
-  content:'';position:absolute;left:0;top:8px;bottom:8px;
-  width:2px;background:var(--border);border-radius:2px;
-}
-.tl-item{
-  position:relative;background:var(--surface);
-  border:1px solid var(--border);border-radius:var(--radius);
-  padding:1.5rem;margin-bottom:1.1rem;
-  box-shadow:var(--shadow);transition:box-shadow 0.25s,transform 0.25s;
-}
-.tl-item:hover{box-shadow:var(--shadow-md);transform:translateY(-2px)}
-.tl-dot{
-  position:absolute;left:-1.8rem;top:1.5rem;
-  width:11px;height:11px;border-radius:50%;
-  background:var(--accent);border:2px solid var(--bg);
-  box-shadow:0 0 0 2px var(--accent);
-}
-.tl-head{
-  display:flex;justify-content:space-between;
-  align-items:flex-start;flex-wrap:wrap;gap:0.5rem;
-  margin-bottom:0.6rem;
-}
-.tl-role{font-family:'Playfair Display',serif;font-size:1.05rem;margin-bottom:0.15rem}
-.tl-co{font-size:0.83rem;font-weight:700;color:var(--accent2)}
-.tl-date{
-  font-size:0.72rem;color:var(--muted);
-  background:var(--surface2);border:1px solid var(--border);
-  padding:0.2rem 0.65rem;border-radius:100px;white-space:nowrap;
-}
-.tl-group{margin-top:0.8rem}
-.tl-group-title{
-  font-size:0.75rem;font-weight:700;color:var(--accent);
-  text-transform:uppercase;letter-spacing:0.07em;
-  margin-bottom:0.3rem;display:flex;align-items:center;gap:0.4rem;
-}
-.tl-group-title::before{content:'';width:10px;height:2px;background:var(--accent2);border-radius:2px}
-.tl-list{list-style:none;display:flex;flex-direction:column;gap:0.35rem}
-.tl-list li{
-  font-size:0.84rem;color:var(--muted);
-  line-height:1.65;padding-left:1rem;position:relative;
-}
-.tl-list li::before{
-  content:'→';position:absolute;left:0;
-  color:var(--accent2);font-size:0.75rem;top:2px;
-}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
 
-/* ══ SKILLS ══ */
-.skills-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(210px,1fr));
-  gap:0.9rem;
-}
-.skill-card{
-  background:var(--surface);border:1px solid var(--border);
-  border-radius:var(--radius);padding:1.1rem;
-  box-shadow:var(--shadow);transition:all 0.25s;
-}
-.skill-card:hover{box-shadow:var(--shadow-md);transform:translateY(-3px);border-color:var(--accent2)}
-.skill-icon{
-  width:38px;height:38px;border-radius:9px;
-  background:var(--accent-light);
-  display:flex;align-items:center;justify-content:center;
-  color:var(--accent);font-size:0.95rem;margin-bottom:0.7rem;
-}
-.skill-card h4{font-size:0.8rem;font-weight:700;margin-bottom:0.5rem}
-.stags{display:flex;flex-wrap:wrap;gap:0.3rem}
-.stag{
-  font-size:0.69rem;background:var(--surface2);
-  border:1px solid var(--border);border-radius:5px;
-  padding:0.18rem 0.45rem;color:var(--muted);
-}
-
-/* ══ PROJECTS ══ */
-.proj-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
-  gap:1.1rem;
-}
-.proj-card{
-  background:var(--surface);border:1px solid var(--border);
-  border-radius:var(--radius);padding:1.4rem;
-  box-shadow:var(--shadow);display:flex;flex-direction:column;gap:0.6rem;
-  transition:all 0.25s;position:relative;overflow:hidden;
-}
-.proj-card::before{
-  content:'';position:absolute;top:0;left:0;right:0;height:3px;
-  background:linear-gradient(90deg,var(--accent),var(--accent2));
-  transform:scaleX(0);transform-origin:left;transition:transform 0.3s ease;
-}
-.proj-card:hover::before{transform:scaleX(1)}
-.proj-card:hover{box-shadow:var(--shadow-md);transform:translateY(-3px)}
-.proj-top{display:flex;align-items:flex-start;justify-content:space-between;gap:0.5rem}
-.proj-icon{
-  width:40px;height:40px;border-radius:10px;
-  background:var(--accent-light);flex-shrink:0;
-  display:flex;align-items:center;justify-content:center;
-  color:var(--accent);font-size:1rem;
-}
-.proj-links{display:flex;gap:0.35rem;flex-shrink:0;flex-wrap:wrap;justify-content:flex-end}
-.proj-link{
-  font-size:0.7rem;font-weight:700;color:var(--accent2);
-  text-decoration:none;display:inline-flex;align-items:center;gap:0.3rem;
-  padding:0.22rem 0.5rem;border-radius:6px;
-  border:1px solid var(--accent-light);background:var(--accent-light);
-  transition:all 0.2s;white-space:nowrap;
-}
-.proj-link:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
-.proj-card h3{font-family:'Playfair Display',serif;font-size:0.97rem;line-height:1.3}
-.grade-badge{
-  display:inline-block;font-size:0.64rem;font-weight:700;
-  background:var(--accent);color:#fff;border-radius:4px;
-  padding:0.1rem 0.42rem;margin-left:0.4rem;vertical-align:middle;
-}
-.proj-card p{font-size:0.81rem;color:var(--muted);line-height:1.65;flex:1}
-.ptags{display:flex;flex-wrap:wrap;gap:0.3rem;margin-top:0.1rem}
-.ptag{
-  font-size:0.67rem;font-weight:700;background:var(--accent-light);
-  color:var(--accent);border-radius:5px;padding:0.18rem 0.5rem;
-}
-
-/* ══ EDUCATION ══ */
-.edu-grid{display:grid;gap:0.9rem}
-.edu-card{
-  background:var(--surface);border:1px solid var(--border);
-  border-radius:var(--radius);padding:1.35rem;
-  box-shadow:var(--shadow);display:flex;gap:1.1rem;
-  align-items:flex-start;transition:all 0.25s;
-}
-.edu-card:hover{box-shadow:var(--shadow-md);transform:translateY(-2px)}
-.edu-ico{
-  width:44px;height:44px;flex-shrink:0;border-radius:11px;
-  background:var(--accent);display:flex;align-items:center;
-  justify-content:center;color:#fff;font-size:1rem;
-}
-.edu-deg{font-family:'Playfair Display',serif;font-size:1rem;margin-bottom:0.18rem}
-.edu-school{font-size:0.82rem;font-weight:700;color:var(--accent2);margin-bottom:0.15rem}
-.edu-date{font-size:0.73rem;color:var(--muted)}
-.edu-note{font-size:0.76rem;color:var(--muted);margin-top:0.25rem}
-
-/* ══ CERTS ══ */
-.cert-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(255px,1fr));
-  gap:0.8rem;
-}
-.cert-card{
-  background:var(--surface);border:1px solid var(--border);
-  border-radius:11px;padding:1rem 1.1rem;
-  display:flex;align-items:flex-start;gap:0.75rem;
-  box-shadow:var(--shadow);transition:all 0.2s;
-  text-decoration:none;color:var(--text);
-}
-.cert-card:hover{border-color:var(--accent2);transform:translateX(3px);box-shadow:var(--shadow-md)}
-.cert-card .fa-certificate{color:var(--accent2);font-size:0.95rem;margin-top:2px;flex-shrink:0}
-.cert-name{font-size:0.81rem;font-weight:700;line-height:1.35;margin-bottom:0.15rem}
-.cert-org{font-size:0.71rem;color:var(--muted)}
-.cert-arrow{margin-left:auto;color:var(--accent2);font-size:0.7rem;flex-shrink:0;margin-top:2px}
-
-/* ══ ACHIEVEMENTS ══ */
-.ach-list{list-style:none;display:flex;flex-direction:column;gap:0.55rem}
-.ach-list li{
-  background:var(--surface);border:1px solid var(--border);
-  border-radius:10px;padding:0.8rem 1.1rem;
-  font-size:0.84rem;color:var(--muted);
-  display:flex;align-items:flex-start;gap:0.65rem;
-  box-shadow:var(--shadow);transition:all 0.2s;
-}
-.ach-list li:hover{border-color:var(--accent2);color:var(--text)}
-.ach-list li i{color:var(--accent2);margin-top:2px;flex-shrink:0}
-
-/* ══ CONTACT ══ */
-.contact-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(195px,1fr));
-  gap:0.9rem;
-}
-.contact-card{
-  background:var(--surface);border:1px solid var(--border);
-  border-radius:var(--radius);padding:1.4rem;
-  box-shadow:var(--shadow);text-align:center;
-  display:flex;flex-direction:column;align-items:center;gap:0.65rem;
-  text-decoration:none;color:var(--text);transition:all 0.25s;
-}
-.contact-card:hover{box-shadow:var(--shadow-md);transform:translateY(-3px);border-color:var(--accent2)}
-.contact-ico{
-  width:46px;height:46px;border-radius:12px;
-  background:var(--accent-light);
-  display:flex;align-items:center;justify-content:center;
-  color:var(--accent);font-size:1.05rem;
-}
-.c-label{font-size:0.67rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);font-weight:700}
-.c-val{font-size:0.82rem;font-weight:700;word-break:break-all}
-
-/* ══ RESPONSIVE ══ */
-@media(max-width:800px){
-  .nav-links{display:none}
-  .nav-social{display:none}
-  .hamburger{display:block}
-  .page{padding:calc(var(--nav-h) + 1.5rem) 1rem 3rem}
-  .hero{
-    grid-template-columns:1fr;
-    grid-template-rows:auto auto;
-    padding:1.5rem;gap:1.5rem;
-  }
-  .hero-photo{
-    width:110px;height:125px;
-    /* On mobile, photo goes to top right corner */
-    position:absolute;top:1.5rem;right:1.5rem;
-  }
-  .hero{position:relative}
-  .hero-text{padding-right:130px}/* leave space for photo */
-  .hero h1{font-size:1.75rem}
-  .sec-title{font-size:1.45rem}
-  .proj-grid{grid-template-columns:1fr}
-  .skills-grid{grid-template-columns:repeat(auto-fill,minmax(155px,1fr))}
-  .cert-grid{grid-template-columns:1fr}
-  .contact-grid{grid-template-columns:repeat(2,1fr)}
-  .tl-item{padding:1.1rem}
-}
-@media(max-width:480px){
-  .hero-text{padding-right:0}
-  .hero-photo{position:static;width:100%;height:180px;object-fit:cover;border-radius:var(--radius)}
-  .hero{grid-template-columns:1fr}
-  .hero h1{font-size:1.5rem}
-  .contact-grid{grid-template-columns:1fr}
-  .page{padding:calc(var(--nav-h) + 1rem) 0.85rem 3rem}
-  .topnav{padding:0 1rem}
-  .nav-brand-name{font-size:0.85rem}
-}
-</style>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<!-- TOP NAVBAR -->
-<nav class="topnav">
-  
-  <div class="nav-links">
-    <a href="#about">About</a>
-    <a href="#experience">Experience</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#education">Education</a>
-    <a href="#certifications">Certifications</a>
-    <a href="#achievements">Achievements</a>
-    <a href="#contact">Contact</a>
-  </div>
-  <div class="nav-social">
-    <a href="mailto:archanatharammal01@gmail.com" title="Email"><i class="fa-regular fa-envelope"></i></a>
-    <a href="https://www.linkedin.com/in/archana-tharammal" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-    <a href="https://github.com/Archana-Tharammal/" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
-  </div>
-  <button class="hamburger" id="ham" aria-label="Menu"><i class="fa-solid fa-bars" id="ham-icon"></i></button>
-</nav>
+  <!-- NAVBAR -->
 
-<!-- MOBILE MENU -->
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#about">About</a>
-  <a href="#experience">Experience</a>
-  <a href="#skills">Skills</a>
-  <a href="#projects">Projects</a>
-  <a href="#education">Education</a>
-  <a href="#certifications">Certifications</a>
-  <a href="#achievements">Achievements</a>
-  <a href="#contact">Contact</a>
-</div>
+  <nav class="navbar">
+    <div class="nav-container">
 
-<!-- PAGE CONTENT -->
-<div class="page">
+      <a href="#" class="logo">
+        Portfolio<span></span>
+      </a>
 
-<!-- ABOUT -->
-<section id="about">
-  <div class="hero">
-    <div class="hero-text">
-      <div class="hero-tag">AI / ML Engineer · Dubai, UAE</div>
-      <h1>Archana <em>Tharammal</em></h1>
-      <p class="hero-bio">AI &amp; Machine Learning Engineer with an MSc in Data Science from Heriot-Watt University. I build production-ready AI systems — from RAG pipelines and conversational AI to scalable SaaS platforms — turning complex data into real-world impact.</p>
-      <div class="chips">
-        <span class="chip dark"><i class="fa-solid fa-robot"></i>&nbsp;LLMs &amp; Generative AI</span>
-        <span class="chip">RAG Pipelines</span>
-        <span class="chip">Azure OpenAI</span>
-        <span class="chip">Machine Learning</span>
-        <span class="chip">NLP</span>
-        <span class="chip">Vector Databases</span>
-        <span class="chip">n8n Workflows</span>
-        <span class="chip">Python · JavaScript</span>
-      </div>
-    </section>
-
-<!-- EXPERIENCE -->
-<section id="experience">
-  <div class="sec-label">Career</div>
-  <h2 class="sec-title">Experience</h2>
-  <div class="timeline">
-
-    <div class="tl-item">
-      <div class="tl-dot"></div>
-      <div class="tl-head">
-        <div>
-          <div class="tl-role">AI Solutions Engineer Intern</div>
-          <div class="tl-co">Gyanwave Technology · DWTC, Dubai</div>
-        </div>
-        <span class="tl-date">Sep 2025 – Present</span>
-      </div>
-      <div class="tl-group">
-        <div class="tl-group-title">RAG-Powered Multi-Channel Systems</div>
-        <ul class="tl-list">
-          <li>Built a web crawler using Crawl4AI to extract structured and unstructured content from client websites and store it in a Qdrant vector database.</li>
-          <li>Integrated RAG pipelines to power multilingual chatbots across web, WhatsApp, and Telegram.</li>
-          <li>Designed a self-serve UI where clients paste a website URL to auto-generate a live chatbot within minutes, reducing manual data lookup significantly.</li>
-        </ul>
-      </div>
-      <div class="tl-group">
-        <div class="tl-group-title">Conversational AI &amp; Voice Assistants</div>
-        <ul class="tl-list">
-          <li>Designed and deployed multi-channel AI chatbots and voice assistants using Azure OpenAI GPT models, Qdrant vector DB, Node.js, and n8n workflows.</li>
-          <li>Enabled clients to automate property queries and appointment bookings, achieving sub-1-second response times for voice assistants.</li>
-        </ul>
-      </div>
-      <div class="tl-group">
-        <div class="tl-group-title">AI Automation SaaS Platform</div>
-        <ul class="tl-list">
-          <li>Launched a SaaS platform with customizable chatbot widgets for websites and WhatsApp, enabling lead capture and business growth.</li>
-          <li>Built analytics dashboards and secure user/admin authentication using Next.js and Node.js.</li>
-        </ul>
-      </div>
-      <div class="tl-group">
-        <div class="tl-group-title">E-Commerce Chatbot (WooCommerce + MCP Server)</div>
-        <ul class="tl-list">
-          <li>Integrated WooCommerce stores with MCP Server; chatbot supports product search, order placement, status checks, and payments.</li>
-          <li>Built APIs, implemented session management and cart workflows — achieving 55–70% improvement in automated order handling.</li>
-        </ul>
-      </div>
-      <div class="tl-group">
-        <div class="tl-group-title">Production Deployment, Testing &amp; SEO</div>
-        <ul class="tl-list">
-          <li>Participated in client meetings, requirement refinement, production rollouts, debugging, and post-deployment iteration.</li>
-          <li>Optimized prompts to reduce OpenAI API costs by 20–25%; contributed to client pricing models.</li>
-          <li>Managed SEO/SEM activities, monitored traffic with Google Analytics and Microsoft Clarity, and tracked search performance via Google Search Console.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="tl-item">
-      <div class="tl-dot"></div>
-      <div class="tl-head">
-        <div>
-          <div class="tl-role">Data Science &amp; Business Analytics Intern</div>
-          <div class="tl-co">The Sparks Foundation</div>
-        </div>
-        <span class="tl-date">Jul – Aug 2024</span>
-      </div>
-      <ul class="tl-list" style="margin-top:0.6rem">
-        <li>Delivered data science and business analytics projects applying ML techniques to real-world datasets.</li>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
+
+      <div class="menu-btn" id="menuBtn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
+    </div>
+  </nav>
+
+
+  <!-- HERO -->
+
+  <section class="hero" id="about">
+
+    <div class="hero-content">
+
+      <div class="hero-text">
+
+        <div class="hero-tag">
+          AI Solutions Engineer • Dubai, UAE
+        </div>
+
+        <h1>
+          Archana <span>Tharammal</span>
+        </h1>
+
+        <h2>
+          AI / ML Engineer & Data Scientist
+        </h2>
+
+        <p>
+          AI/ML Engineer with an MSc in Data Science from Heriot-Watt University, experienced in building production-ready AI systems, RAG pipelines, conversational AI, voice assistants, ML models, and scalable SaaS automation platforms.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#projects" class="btn primary-btn">
+            View Projects
+          </a>
+
+          <a href="mailto:archanatharammal01@gmail.com" class="btn secondary-btn">
+            Contact Me
+          </a>
+        </div>
+
+        <div class="hero-chips">
+          <span>LLMs</span>
+          <span>RAG Pipelines</span>
+          <span>Machine Learning</span>
+          <span>Azure OpenAI</span>
+          <span>NLP</span>
+          <span>Vector Databases</span>
+          <span>AI Agents</span>
+          <span>Python</span>
+        </div>
+
+      </div>
+
+
+      <div class="hero-image">
+
+        <!-- PLACE YOUR IMAGE HERE -->
+        <!-- Folder Structure:
+             Portfolio/
+                index.html
+                style.css
+                photo.jpeg
+        -->
+
+        <img src="photo.jpeg" alt="Archana Tharammal">
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- EXPERIENCE -->
+
+  <section class="section" id="experience">
+
+    <div class="section-header">
+      <span>Experience</span>
+      <h2>Professional Journey</h2>
+    </div>
+
+    <div class="timeline">
+
+      <div class="timeline-item">
+
+        <div class="timeline-dot"></div>
+
+        <div class="timeline-content">
+
+          <div class="timeline-top">
+            <div>
+              <h3>AI Solutions Engineer Intern</h3>
+              <h4>Gyanwave Technology • Dubai</h4>
+            </div>
+
+            <span>Sep 2025 - Present</span>
+          </div>
+
+          <ul>
+            <li>Built multilingual RAG-based chatbot systems using Azure OpenAI, Qdrant, Crawl4AI, Node.js, and n8n workflows.</li>
+
+            <li>Developed AI voice assistant systems integrated with Twilio, Plivo, OpenAI, ElevenLabs, and PostgreSQL.</li>
+
+            <li>Created production-ready SaaS chatbot platforms with analytics dashboards and WhatsApp integrations.</li>
+
+            <li>Integrated WooCommerce stores with MCP Server for AI-powered product search and automated order handling.</li>
+
+            <li>Optimized prompts and OpenAI API usage reducing operational costs by 20–25%.</li>
+
+            <li>Worked on deployment, debugging, client requirement analysis, testing, SEO optimization, and production rollouts.</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+
+      <div class="timeline-item">
+
+        <div class="timeline-dot"></div>
+
+        <div class="timeline-content">
+
+          <div class="timeline-top">
+            <div>
+              <h3>Data Science & Business Analytics Intern</h3>
+              <h4>The Sparks Foundation</h4>
+            </div>
+
+            <span>2024</span>
+          </div>
+
+          <ul>
+            <li>Worked on business analytics and machine learning projects using real-world datasets.</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- SKILLS -->
+
+  <section class="section" id="skills">
+
+    <div class="section-header">
+      <span>Skills</span>
+      <h2>Technical Expertise</h2>
+    </div>
+
+    <div class="skills-grid">
+
+      <div class="skill-card">
+        <i class="fa-solid fa-brain"></i>
+        <h3>AI & LLM Systems</h3>
+
+        <div class="skill-tags">
+          <span>LangChain</span>
+          <span>RAG</span>
+          <span>Prompt Engineering</span>
+          <span>AI Agents</span>
+          <span>Fine-Tuning</span>
+          <span>Hallucination Mitigation</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <i class="fa-solid fa-chart-line"></i>
+        <h3>Machine Learning</h3>
+
+        <div class="skill-tags">
+          <span>scikit-learn</span>
+          <span>TensorFlow</span>
+          <span>PyTorch</span>
+          <span>XGBoost</span>
+          <span>LightGBM</span>
+          <span>CNN</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <i class="fa-solid fa-language"></i>
+        <h3>NLP & Deep Learning</h3>
+
+        <div class="skill-tags">
+          <span>BERT</span>
+          <span>LSTM</span>
+          <span>Transformers</span>
+          <span>TF-IDF</span>
+          <span>Sentiment Analysis</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <i class="fa-solid fa-code"></i>
+        <h3>Programming</h3>
+
+        <div class="skill-tags">
+          <span>Python</span>
+          <span>JavaScript</span>
+          <span>SQL</span>
+          <span>C</span>
+          <span>C#</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <i class="fa-solid fa-database"></i>
+        <h3>Databases</h3>
+
+        <div class="skill-tags">
+          <span>PostgreSQL</span>
+          <span>MongoDB</span>
+          <span>MySQL</span>
+          <span>Qdrant</span>
+          <span>Snowflake</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <i class="fa-solid fa-cloud"></i>
+        <h3>Deployment & Cloud</h3>
+
+        <div class="skill-tags">
+          <span>AWS</span>
+          <span>Docker</span>
+          <span>Git</span>
+          <span>Postman</span>
+          <span>CI/CD</span>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- PROJECTS -->
+
+  <section class="section" id="projects">
+
+    <div class="section-header">
+      <span>Projects</span>
+      <h2>Featured Work</h2>
+    </div>
+
+    <div class="projects-grid">
+
+
+      <div class="project-card">
+
+        <div class="project-icon">
+          <i class="fa-solid fa-brain"></i>
+        </div>
+
+        <h3>Student Mental Health Prediction</h3>
+
+        <p>
+          Built and fine-tuned 8 ML models for predicting stress, anxiety, and depression using multi-region datasets achieving ~95% accuracy with adaptive intervention systems.
+        </p>
+
+        <div class="project-tags">
+          <span>Machine Learning</span>
+          <span>Flask</span>
+          <span>Python</span>
+          <span>Classification</span>
+        </div>
+
+        <div class="project-links">
+          <a href="https://github.com/Archana-Tharammal/Machine-Learning-for-Student-Mental-Health-From-Patterns-to-Interventions" target="_blank">
+            <i class="fa-brands fa-github"></i> GitHub
+          </a>
+        </div>
+
+      </div>
+
+
+
+      <div class="project-card">
+
+        <div class="project-icon">
+          <i class="fa-solid fa-robot"></i>
+        </div>
+
+        <h3>AI SaaS Chatbot Platform</h3>
+
+        <p>
+          Developed scalable multilingual chatbot SaaS systems with website widgets, analytics dashboards, WhatsApp integrations, and AI-powered automation workflows.
+        </p>
+
+        <div class="project-tags">
+          <span>Next.js</span>
+          <span>Node.js</span>
+          <span>RAG</span>
+          <span>Azure OpenAI</span>
+        </div>
+
+      </div>
+
+
+
+      <div class="project-card">
+
+        <div class="project-icon">
+          <i class="fa-solid fa-phone-volume"></i>
+        </div>
+
+        <h3>AI Voice Assistant Platform</h3>
+
+        <p>
+          Built AI voice systems integrated with Twilio, Plivo, ElevenLabs, PostgreSQL, and OpenAI for real-time customer support and appointment handling.
+        </p>
+
+        <div class="project-tags">
+          <span>Voice AI</span>
+          <span>Twilio</span>
+          <span>OpenAI</span>
+          <span>Node.js</span>
+        </div>
+
+      </div>
+
+
+
+      <div class="project-card">
+
+        <div class="project-icon">
+          <i class="fa-solid fa-heart-pulse"></i>
+        </div>
+
+        <h3>Heart Disease Prediction</h3>
+
+        <p>
+          Applied machine learning and deep learning models on ECG and clinical datasets for myocardial infarction prediction with Random Forest and CNN architectures.
+        </p>
+
+        <div class="project-tags">
+          <span>CNN</span>
+          <span>Random Forest</span>
+          <span>Deep Learning</span>
+        </div>
+
+      </div>
+
+
+
+      <div class="project-card">
+
+        <div class="project-icon">
+          <i class="fa-solid fa-chart-column"></i>
+        </div>
+
+        <h3>Data Analysis Application</h3>
+
+        <p>
+          Built a distributed analytics application using Dask for processing 3M+ records with interactive visualizations and reporting dashboards.
+        </p>
+
+        <div class="project-tags">
+          <span>Dask</span>
+          <span>Big Data</span>
+          <span>Visualization</span>
+        </div>
+
+      </div>
+
+
+
+      <div class="project-card">
+
+        <div class="project-icon">
+          <i class="fa-brands fa-reddit"></i>
+        </div>
+
+        <h3>Danube Sentiment Analysis</h3>
+
+        <p>
+          NLP pipeline for Reddit sentiment classification using TF-IDF vectorization, SVM, and Logistic Regression models.
+        </p>
+
+        <div class="project-tags">
+          <span>NLP</span>
+          <span>SVM</span>
+          <span>TF-IDF</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- EDUCATION -->
+
+ <section class="section" id="education">
+
+  <div class="section-header">
+    <span>Education</span>
+    <h2>Academic Background</h2>
+  </div>
+
+  <div class="education-grid">
+
+    <!-- MSc -->
+    <div class="education-card">
+
+      <i class="fa-solid fa-graduation-cap"></i>
+
+      <div class="education-content">
+
+        <div class="edu-row">
+          <h3>MSc in Data Science</h3>
+          <span class="edu-year">2024 - 2025</span>
+        </div>
+
+        <div class="edu-row">
+          <h4>Heriot-Watt University, Dubai</h4>
+          <span class="edu-gpa">GPA: 3.5</span>
+        </div>
+
+        <p class="edu-note">
+          School of Mathematics and Computer Science
+        </p>
+
+      </div>
+
+    </div>
+
+    <!-- BTech -->
+    <div class="education-card">
+
+      <i class="fa-solid fa-microchip"></i>
+
+      <div class="education-content">
+
+        <div class="edu-row">
+          <h3>B.Tech in Electronics & Communication Engineering</h3>
+          <span class="edu-year">2019 - 2023</span>
+        </div>
+
+        <div class="edu-row">
+          <h4>APJ Abdul Kalam Technological University</h4>
+          <span class="edu-gpa">CGPA: 8.51</span>
+        </div>
+
+        <p class="edu-note">
+          Vimal Jyothi Engineering College
+        </p>
+
+      </div>
+
     </div>
 
   </div>
+
 </section>
 
-<!-- SKILLS -->
-<section id="skills">
-  <div class="sec-label">What I Work With</div>
-  <h2 class="sec-title">Technical Skills</h2>
-  <div class="skills-grid">
-    <div class="skill-card">
-      <div class="skill-icon"><i class="fa-solid fa-brain"></i></div>
-      <h4>RAG &amp; LLM Systems</h4>
-      <div class="stags">
-        <span class="stag">LangChain.js</span><span class="stag">Hugging Face</span>
-        <span class="stag">Prompt Engineering</span><span class="stag">Fine-Tuning</span>
-        <span class="stag">AI Agents</span><span class="stag">RAG Pipelines</span>
-        <span class="stag">Hallucination Mitigation</span>
-      </div>
-    </div>
-    <div class="skill-card">
-      <div class="skill-icon"><i class="fa-solid fa-chart-line"></i></div>
-      <h4>Machine Learning &amp; Deep Learning</h4>
-      <div class="stags">
-        <span class="stag">scikit-learn</span><span class="stag">TensorFlow</span>
-        <span class="stag">PyTorch</span><span class="stag">Feature Engineering</span>
-        <span class="stag">Hyperparameter Tuning</span><span class="stag">SMOTE</span>
-      </div>
-    </div>
-    <div class="skill-card">
-      <div class="skill-icon"><i class="fa-solid fa-language"></i></div>
-      <h4>NLP &amp; Text Analytics</h4>
-      <div class="stags">
-        <span class="stag">LSTM</span><span class="stag">BERT</span>
-        <span class="stag">Transformers</span><span class="stag">Sentiment Analysis</span>
-        <span class="stag">Emotion Detection</span><span class="stag">Word Embeddings</span>
-      </div>
-    </div>
-    <div class="skill-card">
-      <div class="skill-icon"><i class="fa-solid fa-code"></i></div>
-      <h4>Programming</h4>
-      <div class="stags">
-        <span class="stag">Python</span><span class="stag">JavaScript</span>
-        <span class="stag">R</span><span class="stag">C</span>
-      </div>
-    </div>
-    <div class="skill-card">
-      <div class="skill-icon"><i class="fa-solid fa-database"></i></div>
-      <h4>Databases</h4>
-      <div class="stags">
-        <span class="stag">MySQL</span><span class="stag">MongoDB</span>
-        <span class="stag">PostgreSQL</span><span class="stag">Qdrant</span>
-        <span class="stag">Snowflake</span><span class="stag">Vector DBs</span>
-      </div>
-    </div>
-    <div class="skill-card">
-      <div class="skill-icon"><i class="fa-solid fa-gears"></i></div>
-      <h4>AI Systems &amp; Automation</h4>
-      <div class="stags">
-        <span class="stag">n8n Workflows</span><span class="stag">REST APIs</span>
-        <span class="stag">MCP Server</span><span class="stag">WAHA</span>
-        <span class="stag">Webhooks</span><span class="stag">SaaS Integrations</span>
-      </div>
-    </div>
-    <div class="skill-card">
-      <div class="skill-icon"><i class="fa-solid fa-server"></i></div>
-      <h4>Developer Tools &amp; Cloud</h4>
-      <div class="stags">
-        <span class="stag">Docker</span><span class="stag">Git</span>
-        <span class="stag">AWS</span><span class="stag">Linux</span>
-        <span class="stag">Nginx</span><span class="stag">Postman</span>
-        <span class="stag">Claude Code</span>
-      </div>
-    </div>
-    <div class="skill-card">
-      <div class="skill-icon"><i class="fa-solid fa-chart-pie"></i></div>
-      <h4>Analytics &amp; Visualization</h4>
-      <div class="stags">
-        <span class="stag">Tableau</span><span class="stag">Plotly</span>
-        <span class="stag">Seaborn</span><span class="stag">D3.js</span>
-        <span class="stag">Google Analytics</span><span class="stag">SEO Tools</span>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- PROJECTS -->
-<section id="projects">
-  <div class="sec-label">Portfolio</div>
-  <h2 class="sec-title">Projects</h2>
-  <div class="proj-grid">
+  <!-- CERTIFICATIONS -->
 
-    <div class="proj-card">
-      <div class="proj-top">
-        <div class="proj-icon"><i class="fa-solid fa-brain"></i></div>
-        <div class="proj-links">
-          <a class="proj-link" href="https://github.com/Archana-Tharammal/Machine-Learning-for-Student-Mental-Health-From-Patterns-to-Interventions" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+  <section class="section" id="certifications">
+
+    <div class="section-header">
+      <span>Certifications</span>
+      <h2>Courses & Certifications</h2>
+    </div>
+
+    <div class="cert-grid">
+
+      <div class="cert-card">
+        <i class="fa-solid fa-certificate"></i>
+        <div>
+          <h3>Build AI Agents & Chatbots with LangGraph</h3>
+          <p>LinkedIn Learning • 2025</p>
         </div>
       </div>
-      <h3>Student Mental Health Prediction<span class="grade-badge">A Grade</span></h3>
-      <p>Preprocessed multi-region datasets with feature engineering, correlation analysis, and scaling. Built and fine-tuned 8 ML models achieving ~95% accuracy in predicting stress, anxiety, and depression. Deployed via Flask for real-time, culturally adaptive interventions.</p>
-      <div class="ptags"><span class="ptag">ML</span><span class="ptag">Flask</span><span class="ptag">Feature Engineering</span><span class="ptag">Python</span></div>
-    </div>
 
-    <div class="proj-card">
-      <div class="proj-top">
-        <div class="proj-icon"><i class="fa-solid fa-globe"></i></div>
-        <div class="proj-links">
-          <a class="proj-link" href="https://gyanwave.com/bot/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+      <div class="cert-card">
+        <i class="fa-solid fa-certificate"></i>
+        <div>
+          <h3>Machine Learning with Python Foundations</h3>
+          <p>LinkedIn Learning • 2025</p>
         </div>
       </div>
-      <h3>Multilingual RAG Chatbot System</h3>
-      <p>Web crawler extracts client website content into Qdrant vector DB, powering multilingual chatbots across web, WhatsApp, and Telegram. Self-serve UI lets clients generate a live chatbot from their URL within minutes.</p>
-      <div class="ptags"><span class="ptag">RAG</span><span class="ptag">Qdrant</span><span class="ptag">Crawl4AI</span><span class="ptag">Azure OpenAI</span><span class="ptag">WhatsApp</span></div>
-    </div>
 
-    <div class="proj-card">
-      <div class="proj-top">
-        <div class="proj-icon"><i class="fa-solid fa-robot"></i></div>
-        <div class="proj-links">
-          <a class="proj-link" href="https://chat365.site" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+      <div class="cert-card">
+        <i class="fa-solid fa-certificate"></i>
+        <div>
+          <h3>BCG Data Science Job Simulation</h3>
+          <p>The Forage • 2025</p>
         </div>
       </div>
-      <h3>SaaS Automation Platform – Chat365</h3>
-      <p>Scalable multilingual (English + Arabic) SaaS platform with customizable chatbot widgets, analytics dashboards, secure authentication, SEO-optimized pages, blog management, and lead generation forms.</p>
-      <div class="ptags"><span class="ptag">Next.js</span><span class="ptag">Node.js</span><span class="ptag">SaaS</span><span class="ptag">Arabic/EN</span><span class="ptag">SEO</span></div>
-    </div>
 
-    <div class="proj-card">
-      <div class="proj-top">
-        <div class="proj-icon"><i class="fa-solid fa-chart-bar"></i></div>
-        <div class="proj-links">
-          <a class="proj-link" href="https://github.com/Archana-Tharammal/Human-Evolution-Data-Visualization-and-Analytics/tree/main/f-21-dv-du-group-3" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+      <div class="cert-card">
+        <i class="fa-solid fa-certificate"></i>
+        <div>
+          <h3>Diploma in Python with React & Data Science</h3>
+          <p>STED Council</p>
         </div>
       </div>
-      <h3>Human Evolution Visualization</h3>
-      <p>Interactive D3.js visualization of human evolution data. Performed text cleaning, TF-IDF vectorization, and trained SVM/Logistic Regression models. Visualized sentiment trends and model performance metrics.</p>
-      <div class="ptags"><span class="ptag">D3.js</span><span class="ptag">NLP</span><span class="ptag">TF-IDF</span><span class="ptag">SVM</span></div>
+
     </div>
 
-    <div class="proj-card">
-      <div class="proj-top">
-        <div class="proj-icon"><i class="fa-solid fa-heart-pulse"></i></div>
-        <div class="proj-links">
-          <a class="proj-link" href="https://github.com/Archana-Tharammal/heart_disease_prediction" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
-        </div>
-      </div>
-      <h3>Heart Disease Prediction</h3>
-      <p>Predicted myocardial infarction risk using clinical data and ECG images. K-Means clustering segmented patients into 3 risk groups; Random Forest achieved 92.7% accuracy; CNN on ECG images achieved 84.49% with data augmentation.</p>
-      <div class="ptags"><span class="ptag">Random Forest</span><span class="ptag">CNN</span><span class="ptag">K-Means</span><span class="ptag">Deep Learning</span></div>
+  </section>
+
+
+
+  <!-- CONTACT -->
+
+  <section class="section" id="contact">
+
+    <div class="section-header">
+      <span>Contact</span>
+      <h2>Let's Connect</h2>
     </div>
 
-    <div class="proj-card">
-      <div class="proj-top">
-        <div class="proj-icon"><i class="fa-brands fa-reddit"></i></div>
+    <div class="contact-grid">
+
+      <a href="mailto:archanatharammal01@gmail.com" class="contact-card">
+
+        <i class="fa-regular fa-envelope"></i>
+
+        <h3>Email</h3>
+
+        <p>
+          archanatharammal01@gmail.com
+        </p>
+
+      </a>
+
+
+      <a href="https://www.linkedin.com/in/archana-tharammal" target="_blank" class="contact-card">
+
+        <i class="fa-brands fa-linkedin"></i>
+
+        <h3>LinkedIn</h3>
+
+        <p>
+          archana-tharammal
+        </p>
+
+      </a>
+
+
+      <a href="https://github.com/Archana-Tharammal" target="_blank" class="contact-card">
+
+        <i class="fa-brands fa-github"></i>
+
+        <h3>GitHub</h3>
+
+        <p>
+          Archana-Tharammal
+        </p>
+
+      </a>
+
+
+      <div class="contact-card">
+
+        <i class="fa-solid fa-location-dot"></i>
+
+        <h3>Location</h3>
+
+        <p>
+          Dubai, UAE
+        </p>
+
       </div>
-      <h3>Danube Company Sentiment Analysis</h3>
-      <p>NLP pipeline using TF-IDF vectorization and SVM/Logistic Regression classifiers to analyze brand sentiment on Reddit — tokenization, stopword removal, lemmatization, and model evaluation.</p>
-      <div class="ptags"><span class="ptag">NLP</span><span class="ptag">SVM</span><span class="ptag">TF-IDF</span><span class="ptag">Python</span></div>
+
     </div>
 
-    <div class="proj-card">
-      <div class="proj-top">
-        <div class="proj-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
-        <div class="proj-links">
-          <a class="proj-link" href="https://github.com/anugrahaantoo/Data_Analysis_Application_using_Python" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
-        </div>
-      </div>
-      <h3>Data Analysis Application</h3>
-      <p>Python GUI for large-scale document interaction analytics across 3M+ records using Dask for distributed processing. Visualized top readers, popular browsers, countries, and document patterns.</p>
-      <div class="ptags"><span class="ptag">Dask</span><span class="ptag">Python GUI</span><span class="ptag">Big Data</span><span class="ptag">Visualization</span></div>
-    </div>
+  </section>
 
-    <div class="proj-card">
-      <div class="proj-top">
-        <div class="proj-icon"><i class="fa-solid fa-trophy"></i></div>
-      </div>
-      <h3>Kaggle Binary Classification Challenge</h3>
-      <p>Bank Marketing dataset challenge with synthetic data. Applied LightGBM, XGBoost, and a hybrid LightGBM + Neural Network achieving a score of 0.96971. Focused on model generalization comparing original vs. generated distributions.</p>
-      <div class="ptags"><span class="ptag">LightGBM</span><span class="ptag">XGBoost</span><span class="ptag">Neural Net</span><span class="ptag">Kaggle</span></div>
-    </div>
 
-  </div>
-</section>
 
-<!-- EDUCATION -->
-<section id="education">
-  <div class="sec-label">Academic Background</div>
-  <h2 class="sec-title">Education</h2>
-  <div class="edu-grid">
-    <div class="edu-card">
-      <div class="edu-ico"><i class="fa-solid fa-graduation-cap"></i></div>
-      <div>
-        <div class="edu-deg">MSc in Data Science <span style="font-size:0.75rem;font-family:'Lato',sans-serif;font-weight:700;color:var(--accent2);">Merit Award</span></div>
-        <div class="edu-school">Heriot-Watt University, Dubai Campus</div>
-        <div class="edu-date">Sep 2024 – Sep 2025</div>
-        <div class="edu-note">School of Mathematics and Computer Science</div>
-      </div>
-    </div>
-    <div class="edu-card">
-      <div class="edu-ico"><i class="fa-solid fa-microchip"></i></div>
-      <div>
-        <div class="edu-deg">B.Tech in Electronics &amp; Communication Engineering</div>
-        <div class="edu-school">Vimal Jyothi Engineering College · APJ Abdul Kalam Technological University, India</div>
-        <div class="edu-date">2019 – 2023</div>
-        <div class="edu-note">CGPA: 8.51 / 10</div>
-      </div>
-    </div>
-  </div>
-</section>
+  <!-- FOOTER -->
 
-<!-- CERTIFICATIONS -->
-<section id="certifications">
-  <div class="sec-label">Learning &amp; Credentials</div>
-  <h2 class="sec-title">Certifications</h2>
-  <div class="cert-grid">
-    <a class="cert-card" href="https://www.linkedin.com/learning/certificates/43aa6e3c7eb24d7c80ca8fe12a91c1af03057a454015289507047994206316c6?trk=share_certificate" target="_blank">
-      <i class="fa-solid fa-certificate"></i>
-      <div>
-        <div class="cert-name">Build AI Agents &amp; Chatbots with LangGraph</div>
-        <div class="cert-org">LinkedIn Learning · 2025</div>
-      </div>
-      <i class="fa-solid fa-arrow-up-right-from-square cert-arrow"></i>
-    </a>
-    <a class="cert-card" href="https://www.linkedin.com/learning/certificates/6ed2401a704b61de78eebce1c6dfbfe6664e121340b607c5169e9d24063b2916?trk=share_certificate" target="_blank">
-      <i class="fa-solid fa-certificate"></i>
-      <div>
-        <div class="cert-name">Machine Learning with Python Foundations</div>
-        <div class="cert-org">LinkedIn Learning · 2025</div>
-      </div>
-      <i class="fa-solid fa-arrow-up-right-from-square cert-arrow"></i>
-    </a>
-    <a class="cert-card" href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/SKZxezskWgmFjRvj9/Tcz8gTtprzAS4xSoK_SKZxezskWgmFjRvj9_qzHBZ7u3ea3wAPY5h_1746049827871_completion_certificate.pdf" target="_blank">
-      <i class="fa-solid fa-certificate"></i>
-      <div>
-        <div class="cert-name">BCG Data Science Job Simulation</div>
-        <div class="cert-org">The Forage · 2025</div>
-      </div>
-      <i class="fa-solid fa-arrow-up-right-from-square cert-arrow"></i>
-    </a>
-    <div class="cert-card">
-      <i class="fa-solid fa-certificate"></i>
-      <div>
-        <div class="cert-name">Data Science &amp; Business Analytics Internship</div>
-        <div class="cert-org">The Sparks Foundation · 2024</div>
-      </div>
-    </div>
-    <div class="cert-card">
-      <i class="fa-solid fa-certificate"></i>
-      <div>
-        <div class="cert-name">Diploma in Python with React &amp; Data Science</div>
-        <div class="cert-org">STED Council · 2023–24</div>
-      </div>
-    </div>
-  </div>
-</section>
+  <footer>
+    <p>
+      © 2026 Archana Tharammal • AI/ML Engineer Portfolio
+    </p>
+     <a href="privacy.html">
+    Privacy Policy
+  </a>
+  </footer>
 
-<!-- ACHIEVEMENTS -->
-<section id="achievements">
-  <div class="sec-label">Recognition &amp; Participation</div>
-  <h2 class="sec-title">Achievements &amp; Participation</h2>
-  <ul class="ach-list">
-    <li><i class="fa-solid fa-id-card"></i>Awarded UAE Golden Visa for academic excellence (10-year validity)</li>
-    <li><i class="fa-solid fa-globe"></i>GITEX GLOBAL 2025 (Dubai WTC) – Explored cutting-edge AI technologies and networked with industry professionals</li>
-    <li><i class="fa-solid fa-language"></i>IELTS Overall Band Score: 7.5</li>
-    <li><i class="fa-solid fa-medal"></i>Bronze Medal – All Kerala Sahodaya Scholastic Achievement Test</li>
-    <li><i class="fa-solid fa-users"></i>Volunteer &amp; Member, Certification &amp; Publishing Team – TANTRA Technical Fest</li>
-    <li><i class="fa-solid fa-chess"></i>Participated in inter-school Chess, Badminton, and Pencil Drawing competitions</li>
-  </ul>
-</section>
 
-<!-- CONTACT -->
-<section id="contact">
-  <div class="sec-label">Get in Touch</div>
-  <h2 class="sec-title">Contact</h2>
-  <div class="contact-grid">
-    <a class="contact-card" href="mailto:archanatharammal01@gmail.com">
-      <div class="contact-ico"><i class="fa-regular fa-envelope"></i></div>
-      <div class="c-label">Email</div>
-      <div class="c-val">archanatharammal01@gmail.com</div>
-    </a>
-    <a class="contact-card" href="https://www.linkedin.com/in/archana-tharammal" target="_blank">
-      <div class="contact-ico"><i class="fa-brands fa-linkedin-in"></i></div>
-      <div class="c-label">LinkedIn</div>
-      <div class="c-val">archana-tharammal</div>
-    </a>
-    <a class="contact-card" href="https://github.com/Archana-Tharammal/" target="_blank">
-      <div class="contact-ico"><i class="fa-brands fa-github"></i></div>
-      <div class="c-label">GitHub</div>
-      <div class="c-val">Archana-Tharammal</div>
-    </a>
-    <div class="contact-card">
-      <div class="contact-ico"><i class="fa-solid fa-location-dot"></i></div>
-      <div class="c-label">Location</div>
-      <div class="c-val">JLT, Dubai, UAE</div>
-    </div>
-  </div>
-</section>
 
-</div><!-- end .page -->
+  <!-- SCRIPT -->
 
-<script>
-  const ham = document.getElementById('ham');
-  const hamIcon = document.getElementById('ham-icon');
-  const mobileMenu = document.getElementById('mobileMenu');
+  <script>
 
-  ham.addEventListener('click', () => {
-    const open = mobileMenu.classList.toggle('open');
-    hamIcon.className = open ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
-  });
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
 
-  mobileMenu.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => {
-      mobileMenu.classList.remove('open');
-      hamIcon.className = 'fa-solid fa-bars';
+    menuBtn.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
     });
-  });
 
-  // Active nav highlight on scroll
-  const sections = document.querySelectorAll('section[id]');
-  const navAs = document.querySelectorAll('.nav-links a, .mobile-menu a');
-  const io = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        navAs.forEach(a => a.classList.remove('active'));
-        document.querySelectorAll(`a[href="#${e.target.id}"]`)
-          .forEach(a => a.classList.add('active'));
-      }
-    });
-  }, { threshold: 0.3 });
-  sections.forEach(s => io.observe(s));
-</script>
+  </script>
+
 </body>
 </html>

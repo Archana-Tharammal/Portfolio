@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-
   const menuBtn = document.getElementById("menuBtn");
   const navLinks = document.getElementById("navLinks");
 
@@ -8,5 +7,4 @@ document.addEventListener("DOMContentLoaded", () => {
       navLinks.classList.toggle("active");
     });
   }
-
 });

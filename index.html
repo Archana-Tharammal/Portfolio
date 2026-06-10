@@ -941,8 +941,12 @@
     target="_blank"
     rel="noopener noreferrer"
     class="contact-card"
-    onclick="trackEvent('linkedin_click', 'social', 'linkedin_profile')"
-  >
+    onclick="trackAndNavigate(
+      event,
+      'linkedin_click', 'social', 'linkedin_profile','https://www.linkedin.com/in/archana-tharammal',
+      true
+      
+      )">
 
     <i class="fa-brands fa-linkedin"></i>
 
@@ -960,7 +964,7 @@
     target="_blank"
     rel="noopener noreferrer"
     class="contact-card"
-    onclick="trackEvent('github_click', 'social', 'github_profile')"
+    onclick="trackAndNavigate('github_click', 'social', 'github_profile')"
   >
 
     <i class="fa-brands fa-github"></i>

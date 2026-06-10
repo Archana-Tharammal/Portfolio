@@ -54,13 +54,13 @@
   </a>
 
   <ul class="nav-links" id="navLinks">
-    <li><a href="#about">About</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#education">Education</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#certifications">Certifications</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#about" onclick="trackEvent('nav_click', 'navigation', 'about')">About</a></li>
+    <li><a href="#experience" onclick="trackEvent('nav_click', 'navigation', 'experience')">Experience</a></li>
+    <li><a href="#education" onclick="trackEvent('nav_click', 'navigation', 'education')">Education</a></li>
+    <li><a href="#skills" onclick="trackEvent('nav_click', 'navigation', 'skills')">Skills</a></li>
+    <li><a href="#projects" onclick="trackEvent('nav_click', 'navigation', 'projects')">Projects</a></li>
+    <li><a href="#certifications" onclick="trackEvent('nav_click', 'navigation', 'certificates')">Certificates</a></li>
+    <li><a href="#contact" onclick="trackEvent('nav_click', 'navigation', 'Contacts')">Contact</a></li>
   </ul>
 
   <div class="menu-btn" id="menuBtn">
@@ -108,10 +108,20 @@
       </a>
 
       <a href="mailto:archanatharammal01@gmail.com" class="btn secondary-btn">
-        Contact Me
+        Contact
       </a>
-
+      <a href="Archana_tharammal.pdf"
+      target="_blank"
+      class="btn secondary-btn"
+      onclick="trackEvent('cv_view', 'engagement', 'view_cv')">
+      View CV
+    </a>
     </div>
+        
+
+  
+
+
 
     <div class="hero-chips">
       <span>LLMs</span>
@@ -138,6 +148,7 @@
     >
 
   </div>
+
 
 </div>
  
@@ -329,7 +340,7 @@
       </div>
 
       <p class="edu-note">
-        Vimal Jyothi Engineering College
+        Vimal Jyothi Engineering College, Kerala, India
       </p>
 
     </div>
@@ -364,13 +375,15 @@
     <div class="skill-tags">
       <span>LangChain</span>
       <span>RAG Pipelines</span>
+      <span>LLMs</span>
       <span>Prompt Engineering</span>
       <span>AI Agents</span>
-      <span>LLMs</span>
-      <span>Fine-Tuning</span>
       <span>Hallucination Mitigation</span>
-      <span>OpenAI</span>
-      <span>Azure OpenAI</span>
+      <span>Fine-Tuning</span>
+      <span>Retrival Optimization</span>
+      <span>Token budgeting</span>
+      
+      
     </div>
 
   </div>
@@ -388,12 +401,12 @@
       <span>scikit-learn</span>
       <span>TensorFlow</span>
       <span>PyTorch</span>
-      <span>XGBoost</span>
-      <span>LightGBM</span>
-      <span>CNN</span>
-      <span>LSTM</span>
-      <span>Random Forest</span>
+      <span>Correlation Analysis</span>
+      <span>Neural Networks</span>
+      <span>Model Evaluation</span>
+      <span>Feature Engineering</span>
       <span>Classification</span>
+      <span>hyperparameter Tuning</span>
     </div>
 
   </div>
@@ -403,7 +416,7 @@
 
   <div class="skill-card">
 
-    <i class="fa-solid fa-language"></i>
+    <i class="fa-solid fa-robot"></i>
 
     <h3>NLP & Text Analytics</h3>
 
@@ -415,7 +428,6 @@
       <span>Word Embeddings</span>
       <span>TF-IDF</span>
       <span>Sentiment Analysis</span>
-      <span>Emotion Detection</span>
       <span>Text Classification</span>
     </div>
 
@@ -432,10 +444,10 @@
 
     <div class="skill-tags">
       <span>Python</span>
-      <span>JavaScript</span>
       <span>SQL</span>
       <span>C</span>
       <span>C#</span>
+      <span>JavaScript</span>
     </div>
 
   </div>
@@ -471,12 +483,12 @@
 
     <div class="skill-tags">
       <span>Tableau</span>
+      <span>PowerBI</span>
       <span>Plotly</span>
       <span>Seaborn</span>
       <span>Matplotlib</span>
       <span>D3.js</span>
-      <span>Google Analytics</span>
-      <span>Google Search Console</span>
+      <span>Google Analytics & Search Console</span>
       <span>Microsoft Clarity</span>
     </div>
 
@@ -494,14 +506,13 @@
     <div class="skill-tags">
       <span>Docker</span>
       <span>Git</span>
+      <span>AWS</span>
       <span>Postman</span>
       <span>Jupyter Notebook</span>
       <span>VS Code</span>
-      <span>PyCharm</span>
-      <span>Cursor</span>
-      <span>AWS</span>
       <span>Claude Code</span>
-      <span>Gemini</span>
+      <span>OpenAI Codex</span>
+      <span>Cursor</span>
       <span>Google AI Studio</span>
     </div>
 
@@ -518,14 +529,34 @@
 
     <div class="skill-tags">
       <span>REST APIs</span>
+      <span>Workflow Automation</span>
       <span>API Integration</span>
       <span>n8n Workflows</span>
       <span>MCP Server</span>
-      <span>WAHA Connectors</span>
+      <span>Whatsapp Business API</span>
       <span>Webhooks</span>
       <span>SaaS Integrations</span>
-      <span>Workflow Automation</span>
+      
     </div>
+    </div>
+    <!-- soft skills -->
+
+  <div class="skill-card">
+
+    <i class="fa-solid fa-handshake"></i>
+
+    <h3>Soft Skills </h3>
+
+    <div class="skill-tags">
+      <span>Team Collaboration</span>
+      <span>Critical Analysis</span>
+      <span>Attention to Detail </span>
+      <span>Adaptability</span>
+      <span>Continuous Learning</span>
+      <span>Learning Agility</span>
+      <span>Problem Solving</span>
+      
+    
 
   </div>
 
@@ -553,7 +584,7 @@
 
       <!-- AI SaaS Chatbot -->
 
-      <div class="project-card">
+      <div class="project-card" onclick="trackEvent('project_click', 'projects', 'ai_saas_chatbot')">
 
         <div class="project-icon">
           <i class="fa-solid fa-robot"></i>
@@ -578,7 +609,7 @@
 
       <!-- AI Voice Assistant -->
 
-      <div class="project-card">
+      <div class="project-card" onclick="trackEvent('project_click', 'projects', 'ai_voice')">
 
         <div class="project-icon">
           <i class="fa-solid fa-phone-volume"></i>
@@ -603,7 +634,7 @@
 
       <!-- WooCommerce Chatbot -->
 
-      <div class="project-card">
+      <div class="project-card" onclick="trackEvent('project_click', 'projects', 'ecommerce')">
 
         <div class="project-icon">
           <i class="fa-solid fa-cart-shopping"></i>
@@ -640,7 +671,7 @@
 
       <!-- Dissertation -->
 
-      <div class="project-card">
+      <div class="project-card" onclick="trackEvent('project_click', 'projects', 'mental_health')">
 
         <div class="project-icon">
           <i class="fa-solid fa-brain"></i>
@@ -673,7 +704,7 @@
 
       <!-- Danube Sentiment -->
 
-      <div class="project-card">
+      <div class="project-card" onclick="trackEvent('project_click', 'projects', 'danube')">
 
         <div class="project-icon">
           <i class="fa-brands fa-reddit"></i>
@@ -692,12 +723,18 @@
           <span>Logistic Regression</span>
           <span>Text Analytics</span>
         </div>
-
+         <div class="project-links">
+          <a href="https://colab.research.google.com/drive/1rqUPZpCMT7JXDWdHJDzEPhDgZqLRKqTZ?usp=sharing"
+             target="_blank"
+             rel="noopener noreferrer">
+            <i class="fa-solid fa-link"></i> Link
+          </a>
+        </div>
       </div>
 
       <!-- Heart Disease -->
 
-      <div class="project-card">
+      <div class="project-card" onclick="trackEvent('project_click', 'projects', 'heart_disease')">
 
         <div class="project-icon">
           <i class="fa-solid fa-heart-pulse"></i>
@@ -716,12 +753,18 @@
           <span>Deep Learning</span>
           <span>Healthcare AI</span>
         </div>
-
+        <div class="project-links">
+          <a href="https://github.com/Archana-Tharammal/heart_disease_prediction"
+             target="_blank"
+             rel="noopener noreferrer">
+            <i class="fa-brands fa-github"></i> GitHub
+          </a>
+        </div>
       </div>
 
       <!-- Data Analysis -->
 
-      <div class="project-card">
+      <div class="project-card" onclick="trackEvent('project_click', 'projects', 'da_app')">
 
         <div class="project-icon">
           <i class="fa-solid fa-chart-column"></i>
@@ -740,12 +783,18 @@
           <span>Python</span>
           <span>Analytics</span>
         </div>
-
+        <div class="project-links">
+          <a href="https://github.com/anugrahaantoo/Data_Analysis_Application_using_Python"
+             target="_blank"
+             rel="noopener noreferrer">
+            <i class="fa-brands fa-github"></i> GitHub
+          </a>
+        </div>
       </div>
 
       <!-- Amazon Reviews -->
 
-      <div class="project-card">
+      <div class="project-card" onclick="trackEvent('project_click', 'projects', 'amazon')">
 
         <div class="project-icon">
           <i class="fa-solid fa-comments"></i>
@@ -764,12 +813,18 @@
           <span>Sentiment Analysis</span>
           <span>Hugging Face</span>
         </div>
-
+        <div class="project-links">
+          <a href="https://colab.research.google.com/drive/1dfpfOp0q7DXceAYxPkGdp8DT89LXObX0?usp=sharing"
+             target="_blank"
+             rel="noopener noreferrer">
+            <i class="fa-solid fa-link"></i> Link
+          </a>
+        </div>
       </div>
 
       <!-- Kaggle -->
 
-      <div class="project-card">
+      <div class="project-card" onclick="trackEvent('project_click', 'projects', 'kaggle')">
 
         <div class="project-icon">
           <i class="fa-solid fa-trophy"></i>
@@ -806,7 +861,7 @@
  
 <div class="section-header">
   <span>Certifications</span>
-  <h2>Courses & Certifications</h2>
+  <h2>Courses & Certificates</h2>
 </div>
 
 <div class="cert-grid">
@@ -842,7 +897,13 @@
       <p>STED Council</p>
     </div>
   </div>
-
+  <div class="cert-card">
+    <i class="fa-solid fa-certificate"></i>
+    <div>
+      <h3>Accenture Nordics Developer Job Simulation</h3>
+      <p>The Forage • 2024</p>
+    </div>
+  </div>
 </div>
  
 
@@ -860,7 +921,9 @@
 
 <div class="contact-grid">
 
-  <a href="mailto:archanatharammal01@gmail.com" class="contact-card">
+  <a href="mailto:archanatharammal01@gmail.com" 
+      class="contact-card"
+      onclick="trackEvent('email_click', 'contact', 'email')">
 
     <i class="fa-regular fa-envelope"></i>
 
@@ -878,6 +941,7 @@
     target="_blank"
     rel="noopener noreferrer"
     class="contact-card"
+    onclick="trackEvent('linkedin_click', 'social', 'linkedin_profile')"
   >
 
     <i class="fa-brands fa-linkedin"></i>
@@ -896,6 +960,7 @@
     target="_blank"
     rel="noopener noreferrer"
     class="contact-card"
+    onclick="trackEvent('github_click', 'social', 'github_profile')"
   >
 
     <i class="fa-brands fa-github"></i>

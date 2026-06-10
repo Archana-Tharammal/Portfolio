@@ -130,9 +130,13 @@ body{
   display:flex;
   gap:1rem;
   flex-wrap:wrap;
+  align-items:center;
   margin-bottom:2rem;
 }
-
+.hero-buttons .btn{
+  min-width:180px;
+  text-align:center;
+}
 .btn{
   padding:0.9rem 1.7rem;
   border-radius:10px;
